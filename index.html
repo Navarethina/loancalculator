@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body{
+            width: 100%;
+            height:100vh;
+            background-color:#f0f0f0;
+        }
+        .parent
+        {
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+        }
+        .child1
+        {
+            margin-top: 100px;
+        }
+        .child2
+        {
+            width: 100%;
+            height:100vh;
+            position: relative;
+            top: 200px;
+            margin-right: 300px;
+        }
+        .child2 p{
+            font-size: 40px;
+       color: #90caf9;
+        }
+        .child2 h2{
+       color:#455a64;
+        }
+        .child2 input{
+            width: 40%;
+            height: 30px;
+        }
+        .child2 .btn
+        {
+            margin-top: 10px;
+            width: 40%;
+            height: 30px;
+           color: #455a64;
+           margin-left: 30px;
+           font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+<div class="child1">
+    <img src="assets/images/loan.png" width="60%">
+</div>
+        <div class="child2">
+    <p style="font-family:  'Lobster', cursive;;">Loan Calculator</p>
+
+    <h2>Enter Your Monthly Salary</h2>
+    <input type="text" id="loan">
+    <div class="btn">
+    <button class="btn" onclick="loan()">click</button>
+</div>
+</div>
+
+</div>
+    <script>
+        function loan()
+        {
+            let amount=document.querySelector("#loan").value;
+            let btn=document.querySelector("button");
+            if(amount>=10000 && amount<50000)
+        {
+            alert("You can get 3 lakhs loan")
+        }
+        else if(amount>=50000 && amount<100000)
+{
+    alert("You can get 5 lakhs loan")
+}
+
+else if(amount>=100000 && amount<200000)
+{
+    alert("You can get 10 lakhs loan")
+}
+else{
+    alert("Enter the correct amount");
+}
+        }
+    </script>
+</body>
+</html>
